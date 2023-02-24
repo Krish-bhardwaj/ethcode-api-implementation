@@ -1,0 +1,107 @@
+{
+  "name": "ethcode-api-implementation",
+  "displayName": "ethcode-api-implementation",
+  "description": "This is a vs code extension that shows ethcode extension's api implentation ",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "extensionDependencies": [
+    "7finney.ethcode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "ethcode-api-implementation.helloWorld",
+        "title": "Hello World"
+      },
+      {
+        "command": "ethcode-api-implementation.status",
+        "title": "Status"
+      },
+      {
+        "command": "ethcode-api-implementation.provider",
+        "title": "Provider"
+      },
+      {
+        "command": "ethcode-api-implementation.getNetwork",
+        "title": "Get Network"
+      },
+      {
+        "command": "ethcode-api-implementation.setNetwork",
+        "title": "Set Network"
+      },
+      {
+        "command": "ethcode-api-implementation.getNetworkList",
+        "title": "Get Network List"
+      },
+      {
+        "command": "ethcode-api-implementation.getWalletList",
+        "title": "Get Wallet List"
+      },
+      {
+        "command": "ethcode-api-implementation.getWallet",
+        "title": "Get Wallet"
+      },
+      {
+        "command": "ethcode-api-implementation.getContractAbi",
+        "title": "Get Contract ABI"
+      },
+      {
+        "command": "ethcode-api-implementation.getContractAddress",
+        "title": "Get Contract Address"
+      },
+      {
+        "command": "ethcode-api-implementation.getFunctionInputs",
+        "title": "Get Function Inputs"
+      },
+      {
+        "command": "ethcode-api-implementation.getConstructorInputs",
+        "title": "Get Constructor Inputs"
+      },
+      {
+        "command": "ethcode-api-implementation.listAllFunctions",
+        "title": "List All Functions"
+      },
+      {
+        "command": "ethcode-api-implementation.getContract",
+        "title": "Get Contract"
+      },
+      {
+        "command": "ethcode-api-implementation.executeFunction",
+        "title": "Execute Function"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "yarn run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "yarn run compile && yarn run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^5.45.0",
+    "@typescript-eslint/parser": "^5.45.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.28.0",
+    "glob": "^8.0.3",
+    "mocha": "^10.1.0",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "ethers": "^6.0.8"
+  }
+}
