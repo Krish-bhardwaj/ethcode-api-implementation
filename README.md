@@ -1,1 +1,1 @@
-# ethcode-api-implementation README
+# ethcode-api-implementation
